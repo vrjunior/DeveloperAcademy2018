@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' display-mode='rendered'>
+    <pages>
+        <page name='Anatomia de Funções em Swift 1'/>
+        <page name='Anatomia de Funções em Swift 2'/>
+        <page name='Closures'/>
+        <page name='Closures 2'/>
+        <page name='Closures 3'/>
+        <page name='Anatomia de Funções em Swift 3'/>
+        <page name='Anatomia de Funções em Swift 4'/>
+        <page name='Programação Funcional'/>
+        <page name='Sistema de Danos de RPG'/>
+        <page name='Sistema de Danos de RPG 2'/>
+        <page name='Aplicação parcial de funções'/>
+        <page name='Exercício'/>
+        <page name='Composição de funções'/>
+        <page name='Composição de funções 2'/>
+        <page name='Composição de funções 3'/>
+        <page name='Sobrecarga de Operadores'/>
+        <page name='Operadores Customizados'/>
+        <page name='Operadores Customizados 2'/>
+        <page name='Operadores Customizados 3'/>
+        <page name='Exercícios'/>
+    </pages>
+</playground>
