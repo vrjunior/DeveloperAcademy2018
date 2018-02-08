@@ -5,8 +5,8 @@
 import Foundation
 let game = Game()
 
-//ex1
-func doubleDamage(damage: Damage) -> Modifier {
+// ex1
+func doubleDamage() -> Modifier {
     return { (damage) -> Damage in
         return { (character, distance, enemy) -> Int in
             return 2 * damage(character, distance, enemy)
@@ -14,12 +14,36 @@ func doubleDamage(damage: Damage) -> Modifier {
     }
 }
 
-//ex2
+
+// ex2
 func + (_ first: @escaping Damage, _ second: @escaping Damage) -> Damage {
     return { (character, distance, enemy) in
         return first(character, distance, enemy) + second(character, distance, enemy)
     }
 }
+
+func lostAllDamage() -> Modifier {
+    return { (baseDamage) in
+        return { (character, distance, enemy) in
+            return 0
+        }
+    }
+}
+
+
+//let swordDamage1 = apply(modifier: evaluate(modifier: lostAllDamage(), condition: isCreature(.evil)), to: fixedDamage(1)) + fixedDamage(10)
+//
+//game.set(damage: swordDamage1, for: .sword)
+
+let teste = doubleDamage()
+let swordDamage = apply(modifier: teste, to: fixedDamage(10))
+
+game.set(damage: swordDamage, for: .sword)
+
+
+let lostDamage = fixedDamage(10) <~ lostAllDamage() / isCreature(.evil) <~ fixedDamage(1)
+game.set(damage: lostDamage, for: .sword)
+
 
 /*:
  **Exercício 1**: Crie um modificador que multiplica o dano base por um fator dado (por exemplo , dobrando no caso do fator ser 2).
