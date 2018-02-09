@@ -73,7 +73,44 @@ let newAlergicCandidatesSorted = newAlergicCandidates.sorted(by: { (ingredient1,
 restrictedIngredientCount
 notRestrictedIngredientCount
 
+newAlergicCandidatesSorted
+
+//ex2
+func product(contains ingredient: Ingredient) -> [Product] {
+    return products.filter({ (product) -> Bool in
+        return product.ingredients?.contains(ingredient) ?? false
+    })
+}
+
+//ex3
+func ingredients(of products:[Product]) -> [Ingredient] {
+    var ingredients : [Ingredient] = [Ingredient]()
+    
+    for product in products {
+        if let productIngredients = product.ingredients {
+            let ingredientsToAppend = productIngredients.filter({ (ingredient) -> Bool in
+                return !(ingredients.contains(ingredient))
+                })
+            
+            ingredients.append(contentsOf: ingredientsToAppend)
+        }
+    }
+    
+    return ingredients
+}
 
 
+//test
+
+//ex2
+let ingredientTest = products.first?.ingredients?.first
+if let ingredientTest = ingredientTest {
+    product(contains: ingredientTest)
+}
+
+//ex3
+
+let productsToGetIngredients = [products.first!, products.last!]
+ingredients(of: productsToGetIngredients)
 
 
