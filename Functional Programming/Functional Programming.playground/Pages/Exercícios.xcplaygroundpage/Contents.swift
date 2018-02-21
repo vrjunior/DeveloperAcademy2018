@@ -41,9 +41,12 @@ let swordDamage = apply(modifier: teste, to: fixedDamage(10))
 game.set(damage: swordDamage, for: .sword)
 
 
-let lostDamage = fixedDamage(10) <~ lostAllDamage() / isCreature(.evil) <~ fixedDamage(1)
+let lostDamage = fixedDamage(10) + dices(number: 3, sides: 6) <~ lostAllDamage() / isCreature(.evil) <~ fixedDamage(1)
 game.set(damage: lostDamage, for: .sword)
 
+
+let axeDamage = fixedDamage(20) + fixedDamage(100)
+game.set(damage: axeDamage, for: .axe)
 
 /*:
  **Exercício 1**: Crie um modificador que multiplica o dano base por um fator dado (por exemplo , dobrando no caso do fator ser 2).

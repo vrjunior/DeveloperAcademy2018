@@ -9,7 +9,7 @@ let game = Game()
 //ex1
 func roll(faces: Int) -> Damage {
     return { (character, distance, enemy) -> Int in
-        return Int(arc4random_uniform(UInt32(faces - 1)) + 1)
+        return Int(arc4random_uniform(UInt32(faces)) + 1)
     }
 }
 
@@ -17,7 +17,7 @@ func roll(faces: Int) -> Damage {
 func roll(dices:Int, faces: Int) -> Damage {
     
     return { (character, distance, enemy) -> Int in
-        return Int(arc4random_uniform(UInt32(dices * faces - 1)) + 1)
+        return Int(arc4random_uniform(UInt32(dices * faces)) + 1)
     }
     
 }
