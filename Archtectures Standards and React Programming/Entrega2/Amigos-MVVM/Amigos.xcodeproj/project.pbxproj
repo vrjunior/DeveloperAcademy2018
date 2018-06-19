@@ -97,8 +97,6 @@
 				2567886F1ECA70410010892D /* Resources */,
 				2567886C1ECA70230010892D /* Model */,
 				2567886D1ECA70290010892D /* View */,
-				2567886E1ECA70300010892D /* Controller */,
-				250374241ECB2F2600A45BD4 /* Mechanisms */,
 				2567885A1ECA6FDD0010892D /* AppDelegate.swift */,
 			);
 			path = Amigos;
@@ -107,6 +105,7 @@
 		2567886C1ECA70230010892D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				250374241ECB2F2600A45BD4 /* Mechanisms */,
 				D2FEE787203DEB560010395D /* Persistance */,
 				256788761ECA71D30010892D /* Services */,
 				D2FEE782203DE6960010395D /* VO */,
@@ -117,6 +116,7 @@
 		2567886D1ECA70290010892D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2567886E1ECA70300010892D /* Controller */,
 				2567885E1ECA6FDD0010892D /* Main.storyboard */,
 				256788631ECA6FDD0010892D /* LaunchScreen.storyboard */,
 				250374221ECB2C4200A45BD4 /* PersonTableViewCell.swift */,
@@ -276,12 +276,16 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Amigos/Pods-Amigos-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

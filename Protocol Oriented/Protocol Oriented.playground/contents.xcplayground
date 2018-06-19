@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' display-mode='rendered'>
+    <pages>
+        <page name='Value types'/>
+        <page name='Protocol'/>
+        <page name='Protocol Extensions'/>
+        <page name='Generics'/>
+        <page name='Generics - Part 2'/>
+        <page name='Associated Types'/>
+        <page name='Pattern Matching'/>
+        <page name='Generics Type constraints'/>
+        <page name='Basic Concepts'/>
+        <page name='Extending Classes'/>
+        <page name='Equality'/>
+        <page name='Summary'/>
+        <page name='Appendix A'/>
+    </pages>
+</playground>
